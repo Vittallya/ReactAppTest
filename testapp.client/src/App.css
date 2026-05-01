@@ -1,0 +1,40 @@
+﻿#root {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+th, td {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--code-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+    .modalOverlay div {
+        padding: 20px;
+        border-radius: 8px;
+        min-width: 400px;
+        background-color: var(--bg);        
+    }
+
+.control-panel{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    width: 70%
+}
+    .control-panel input {
+        max-width: 10%
+    }
