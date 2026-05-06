@@ -1,0 +1,25 @@
+# .NET
+bin
+obj
+publish
+.vs
+.vscode
+
+# Node.js
+node_modules
+dist
+out
+.npm
+npm-debug.log
+
+# Docker
+.dockerignore
+Dockerfile
+
+# Git
+.git
+.gitignore
+
+# OS
+.DS_Store
+Thumbs.db
