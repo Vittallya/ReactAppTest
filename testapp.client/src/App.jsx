@@ -1,6 +1,6 @@
 import { useEffect, useState, useRef } from 'react';
 import './App.css';
-import OrderDetails from './orderDetails';
+import OrderDetails from './OrderDetails';
 
 function App() {
     const [data, setData] = useState();
@@ -172,8 +172,10 @@ function App() {
 
     async function onSuccessLoaded(response, pageNumber, limit) {
 
-        try {
-            const data = await response.json();            
+        const data = await response.json();  
+        
+        if(data.data.length > 0)
+        {
             const id = data.data.at(-1).id;
 
             let arr = page.lastId;
@@ -184,12 +186,11 @@ function App() {
             setPage(newPage)
             setData(data.data);
         }
-        catch (error) {
+        else {
             setLoadError({
-                error: `Ошибка чтения ответа: ${error.message}`
+                error: "Нет данных",
             })
         }
-
     }
 
     async function populateData(pageNumber = null, limit = null) {
